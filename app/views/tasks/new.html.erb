@@ -1,0 +1,28 @@
+<div class="container">
+<%= form_with model: @task do |f| %>
+  <div class="card px-4 py-2">
+
+
+  <div class="mb-3">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :details %>
+    <%= f.text_field :details, class: "form-control" %>
+    </div>
+
+  <div class="mb-3">
+    <%= f.label :completed %>
+    <%= f.check_box :completed %>
+    </div>
+
+  <%= f.submit %>
+<% end %>
+</div>
+
+
+<%= link_to "Return",
+tasks_path(@tasks), class: "btn btn-primary" %>
+</div>
